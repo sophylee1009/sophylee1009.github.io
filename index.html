@@ -1,1 +1,215 @@
-hello world
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophy Lee - Creative Portfolio</title>
+    <meta name="description" content="Personal portfolio and resume of Sophy Lee.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#ec4899', // Pink-500
+                        secondary: '#64748b', // Slate-500
+                        dark: '#0f172a', // Slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(180deg, rgba(236, 72, 153, 0.4) 0%, rgba(100, 116, 139, 0) 100%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: move 25s infinite alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(20%, 20%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-slate-100 antialiased relative overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Background Decoration -->
+    <div class="blob top-0 left-0 opacity-50"></div>
+    <div class="blob bottom-0 right-0 !bg-blue-500 opacity-20 animation-delay-2000"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#"
+                class="text-xl font-bold bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">Sophy.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#contact"
+                    class="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-all text-white">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="relative inline-block mb-8 group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                </div>
+                <img src="PinkMonkeyLogo.jpg" alt="Sophy Lee Avatar"
+                    class="relative w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-dark object-cover shadow-2xl">
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Hello, I'm <span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Sophy Lee</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
+                Creative Developer & Digital Strategist. I build accessible, pixel-perfect, and performant web
+                experiences that look good and feel even better.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#experience"
+                    class="px-8 py-4 bg-primary hover:bg-pink-600 text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-pink-500/25 flex items-center justify-center gap-2">
+                    View My Work
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+                <a href="#contact"
+                    class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-semibold backdrop-blur-sm transition-all">Get
+                    in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Resume Section -->
+    <section id="experience" class="py-24 bg-black/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">Journey So Far</h2>
+
+            <div class="space-y-12 border-l-2 border-white/10 ml-3 md:ml-0 pl-8 md:pl-0">
+
+                <!-- Item 1 -->
+                <div class="relative md:flex gap-10 group">
+                    <div
+                        class="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-dark bg-primary shadow-[0_0_10px_2px_rgba(236,72,153,0.5)] md:hidden">
+                    </div>
+
+                    <div class="md:w-1/3 md:text-right md:pr-10 md:border-r-2 md:border-white/10 md:relative">
+                        <div
+                            class="absolute right-[-11px] top-1 w-5 h-5 rounded-full border-4 border-dark bg-primary shadow-[0_0_10px_2px_rgba(236,72,153,0.5)] hidden md:block group-hover:scale-125 transition-transform">
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Senior Frontend Engineer</h3>
+                        <p class="text-primary font-mono text-sm mt-1">2023 - Present</p>
+                        <p class="text-slate-500 text-sm mt-1">TechCorp Inc.</p>
+                    </div>
+                    <div class="md:w-2/3 mt-4 md:mt-0 pb-12">
+                        <p class="text-slate-400 mb-4 ">Spearheading the core design system migration and improving site
+                            performance by 40%. Mentoring junior developers and implementing best practices in React and
+                            Tailwind.</p>
+                        <ul class="list-disc list-inside text-slate-500 text-sm space-y-2 marker:text-primary">
+                            <li>Refactored legacy codebase</li>
+                            <li>Implemented CI/CD pipelines</li>
+                            <li>Designed inclusive UI components</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative md:flex gap-10 group">
+                    <div
+                        class="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-dark bg-slate-600 md:hidden">
+                    </div>
+
+                    <div class="md:w-1/3 md:text-right md:pr-10 md:border-r-2 md:border-white/10 md:relative">
+                        <div
+                            class="absolute right-[-11px] top-1 w-5 h-5 rounded-full border-4 border-dark bg-slate-600 hidden md:block group-hover:bg-primary transition-colors">
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Full Stack Developer</h3>
+                        <p class="text-primary font-mono text-sm mt-1">2020 - 2023</p>
+                        <p class="text-slate-500 text-sm mt-1">Creative Agency</p>
+                    </div>
+                    <div class="md:w-2/3 mt-4 md:mt-0 pb-12">
+                        <p class="text-slate-400 mb-4">Developed award-winning marketing sites for Fortune 500 clients.
+                            Specialized in WebGL animations and interactive storytelling.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/5 text-xs text-slate-300 border border-white/10">Vue.js</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/5 text-xs text-slate-300 border border-white/10">Node.js</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-white/5 text-xs text-slate-300 border border-white/10">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative md:flex gap-10 group">
+                    <div
+                        class="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-dark bg-slate-600 md:hidden">
+                    </div>
+
+                    <div class="md:w-1/3 md:text-right md:pr-10 md:border-r-2 md:border-white/10 md:relative">
+                        <div
+                            class="absolute right-[-11px] top-1 w-5 h-5 rounded-full border-4 border-dark bg-slate-600 hidden md:block group-hover:bg-primary transition-colors">
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Product Designer</h3>
+                        <p class="text-primary font-mono text-sm mt-1">2018 - 2020</p>
+                        <p class="text-slate-500 text-sm mt-1">StartUp Flow</p>
+                    </div>
+                    <div class="md:w-2/3 mt-4 md:mt-0">
+                        <p class="text-slate-400">Led the UI/UX design for the mobile application. Conducted user
+                            research and iterated on prototypes to achieve product-market fit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 border-t border-white/10 text-center">
+        <p class="text-slate-500 mb-4">Ready to build something amazing together?</p>
+        <a href="mailto:hello@sophylee.dev"
+            class="text-2xl font-bold text-white hover:text-primary transition-colors">hello@sophylee.dev</a>
+        <div class="mt-12 text-slate-600 text-sm">
+            &copy; 2025 Sophy Lee. Built with
+            <span class="text-pink-500">
+                <!-- Heart Icon -->
+                &#10084;
+            </span>
+            and Tailwind CSS.
+        </div>
+    </footer>
+
+</body>
+
+</html>
